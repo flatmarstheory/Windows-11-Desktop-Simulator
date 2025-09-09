@@ -1,0 +1,702 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Windows 11 Desktop</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- CSS Imports -->
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/desktop-icons.css">
+    <link rel="stylesheet" href="css/taskbar.css">
+    <link rel="stylesheet" href="css/start-menu.css">
+    <link rel="stylesheet" href="css/notification-panel.css">
+    <link rel="stylesheet" href="css/context-menu.css">
+    <link rel="stylesheet" href="css/settings-modal.css">
+</head>
+<body>
+    <div class="desktop-container">
+        <div class="desktop-content">
+            <!-- Desktop Icons -->
+            <div class="desktop-icon" data-name="This PC" data-icon="desktop-this-pc" data-position="0">
+                <img src="https://img.icons8.com/fluency/48/computer.png" alt="This PC">
+                <span>This PC</span>
+            </div>
+            
+            <div class="desktop-icon" data-name="Recycle Bin" data-icon="desktop-recycle-bin" data-position="1">
+                <img src="https://img.icons8.com/fluency/48/delete-trash.png" alt="Recycle Bin">
+                <span>Recycle Bin</span>
+            </div>
+            
+            <div class="desktop-icon" data-name="Documents" data-icon="desktop-documents" data-position="2">
+                <img src="https://img.icons8.com/fluency/48/folder-invoices.png" alt="Documents">
+                <span>Documents</span>
+            </div>
+            
+            <div class="desktop-icon" data-name="Downloads" data-icon="desktop-downloads" data-position="3">
+                <img src="https://img.icons8.com/fluency/48/downloads-folder.png" alt="Downloads">
+                <span>Downloads</span>
+            </div>
+            
+            <div class="desktop-icon" data-name="Microsoft Edge" data-icon="desktop-edge" data-position="4">
+                <img src="https://img.icons8.com/fluency/48/ms-edge.png" alt="Microsoft Edge">
+                <span>Microsoft Edge</span>
+            </div>
+            
+            <div class="desktop-icon" data-name="File Explorer" data-icon="desktop-explorer" data-position="5">
+                <img src="https://img.icons8.com/fluency/48/folder-tree.png" alt="File Explorer">
+                <span>File Explorer</span>
+            </div>
+            
+            <div class="desktop-icon" data-name="Microsoft Store" data-icon="desktop-store" data-position="6">
+                <img src="https://img.icons8.com/fluency/48/microsoft-store.png" alt="Microsoft Store">
+                <span>Microsoft Store</span>
+            </div>
+            
+            <div class="desktop-icon" data-name="Settings" data-icon="desktop-settings" data-position="7">
+                <img src="https://img.icons8.com/fluency/48/settings.png" alt="Settings">
+                <span>Settings</span>
+            </div>
+
+            <!-- Taskbar -->
+            <div class="taskbar">
+                <div class="taskbar-center">
+                    <div class="taskbar-icon" id="startButton" data-icon="taskbar-start">
+                        <img src="https://img.icons8.com/fluency/48/windows-11.png" alt="Start">
+                    </div>
+                    <div class="taskbar-icon" data-icon="taskbar-search">
+                        <img src="https://img.icons8.com/fluency/48/search.png" alt="Search">
+                    </div>
+                    <div class="taskbar-icon" data-icon="taskbar-teams">
+                        <img src="https://img.icons8.com/fluency/48/microsoft-teams-2019.png" alt="Teams">
+                    </div>
+                    <div class="taskbar-icon" data-icon="taskbar-widgets">
+                        <img src="https://img.icons8.com/fluency/48/dashboard.png" alt="Widgets">
+                    </div>
+                    <div class="taskbar-icon active" data-icon="taskbar-explorer">
+                        <img src="https://img.icons8.com/fluency/48/folder-tree.png" alt="File Explorer">
+                    </div>
+                    <div class="taskbar-icon" data-icon="taskbar-edge">
+                        <img src="https://img.icons8.com/fluency/48/ms-edge.png" alt="Edge">
+                    </div>
+                    <div class="taskbar-icon" data-icon="taskbar-store">
+                        <img src="https://img.icons8.com/fluency/48/microsoft-store.png" alt="Store">
+                    </div>
+                    <div class="taskbar-icon" data-icon="taskbar-office">
+                        <img src="https://img.icons8.com/fluency/48/microsoft-office-2019.png" alt="Office">
+                    </div>
+                    <div class="taskbar-icon" id="settingsButton" data-icon="taskbar-settings">
+                        <img src="https://img.icons8.com/fluency/48/settings.png" alt="Settings">
+                    </div>
+                    <div class="taskbar-icon" data-icon="taskbar-vscode">
+                        <img src="https://img.icons8.com/fluency/48/visual-studio-code-2019.png" alt="VS Code">
+                    </div>
+                    <div class="taskbar-icon" data-icon="taskbar-word">
+                        <img src="https://img.icons8.com/fluency/48/microsoft-word-2019.png" alt="MS Word">
+                    </div>
+                </div>
+                
+                <div class="system-tray">
+                    <div class="system-icons">
+                        <!-- Wi-Fi SVG Icon -->
+                        <svg class="system-icon" data-icon="systray-wifi" viewBox="0 0 24 24" fill="currentColor" alt="Wi-Fi">
+                            <path d="M1 9l2 2c4.97-4.97 13.03-4.97 18 0l2-2C16.93 2.93 7.07 2.93 1 9zm8 8l3 3 3-3c-1.65-1.66-4.34-1.66-6 0zm-4-4l2 2c2.76-2.76 7.24-2.76 10 0l2-2C15.14 9.14 8.87 9.14 5 13z"/>
+                        </svg>
+                        
+                        <!-- Sound SVG Icon -->
+                        <svg class="system-icon" data-icon="systray-sound" viewBox="0 0 24 24" fill="currentColor" alt="Volume">
+                            <path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/>
+                        </svg>
+                        
+                        <!-- Bluetooth SVG Icon -->
+                        <svg class="system-icon" data-icon="systray-bluetooth" viewBox="0 0 24 24" fill="currentColor" alt="Bluetooth">
+                            <path d="M17.71 7.71L12 2h-1v7.59L6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 11 14.41V22h1l5.71-5.71-4.3-4.29 4.3-4.29zM13 5.83l1.88 1.88L13 9.59V5.83zm1.88 10.46L13 18.17v-3.76l1.88 1.88z"/>
+                        </svg>
+                        
+                        <!-- Battery SVG Icon -->
+                        <svg class="system-icon" data-icon="systray-battery" viewBox="0 0 24 24" fill="currentColor" alt="Battery">
+                            <path d="M4 7h12c1.1 0 2 .9 2 2v8c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V9c0-1.1.9-2 2-2zm1 2v8h3v-8H5zm4 0v8h3v-8H9zm4 0v8h3v-8h-3z"/>
+                            <path d="M18 10h1v6h-1z"/>
+                        </svg>
+                        
+                        <!-- Airplane Mode SVG Icon -->
+                        <svg class="system-icon" data-icon="systray-airplane" viewBox="0 0 24 24" fill="currentColor" alt="Airplane Mode">
+                            <path d="M21 16v-2l-8-5V3.5c0-.83-.67-1.5-1.5-1.5S10 2.67 10 3.5V9l-8 5v2l8-2.5V19l-2 1.5V22l3.5-1 3.5 1v-1.5L13 19v-5.5l8 2.5z"/>
+                        </svg>
+                        
+                        <!-- VPN SVG Icon -->
+                        <svg class="system-icon" data-icon="systray-vpn" viewBox="0 0 24 24" fill="currentColor" alt="VPN">
+                            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                        </svg>
+                        
+                        <!-- Notifications SVG Icon -->
+                        <svg class="system-icon" data-icon="systray-notifications" viewBox="0 0 24 24" fill="currentColor" alt="Notifications">
+                            <path d="M12 22c1.1 0 2-.9 2-2h-4c0 1.1.89 2 2 2zm6-6v-5c0-3.07-1.64-5.64-4.5-6.32V4c0-.83-.67-1.5-1.5-1.5s-1.5.67-1.5 1.5v.68C7.63 5.36 6 7.92 6 11v5l-2 2v1h16v-1l-2-2z"/>
+                        </svg>
+                    </div>
+                    
+                    <div class="clock-widget" id="clockWidget">
+                        <div id="time">12:00 PM</div>
+                        <div id="date">12/25/2023</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Start Menu -->
+            <div class="start-menu" id="startMenu">
+                <div class="search-box">
+                    <input type="text" placeholder="Type here to search">
+                    <img src="https://img.icons8.com/fluency/48/search.png" alt="Search" class="search-icon">
+                </div>
+                
+                <div class="start-content">
+                    <div class="section-title">Pinned</div>
+                    <div class="pinned-apps">
+                        <div class="app-tile">
+                            <img src="https://img.icons8.com/fluency/48/ms-edge.png" alt="Edge">
+                            <span>Microsoft Edge</span>
+                        </div>
+                        <div class="app-tile">
+                            <img src="https://img.icons8.com/fluency/48/microsoft-office-2019.png" alt="Office">
+                            <span>Microsoft Office</span>
+                        </div>
+                        <div class="app-tile">
+                            <img src="https://img.icons8.com/fluency/48/visual-studio-code-2019.png" alt="VS Code">
+                            <span>Visual Studio Code</span>
+                        </div>
+                        <div class="app-tile">
+                            <img src="https://img.icons8.com/fluency/48/microsoft-teams-2019.png" alt="Teams">
+                            <span>Microsoft Teams</span>
+                        </div>
+                        <div class="app-tile">
+                            <img src="https://img.icons8.com/fluency/48/microsoft-store.png" alt="Store">
+                            <span>Microsoft Store</span>
+                        </div>
+                        <div class="app-tile">
+                            <img src="https://img.icons8.com/fluency/48/settings.png" alt="Settings">
+                            <span>Settings</span>
+                        </div>
+                    </div>
+                    
+                    <div class="section-title">Recommended</div>
+                    <div class="recommended-items">
+                        <div class="recommended-item">
+                            <img src="https://img.icons8.com/fluency/48/microsoft-word-2019.png" alt="Word">
+                            <div class="recommended-item-info">
+                                <div class="recommended-item-title">Document1.docx</div>
+                                <div class="recommended-item-subtitle">Modified today</div>
+                            </div>
+                        </div>
+                        <div class="recommended-item">
+                            <img src="https://img.icons8.com/fluency/48/microsoft-excel-2019.png" alt="Excel">
+                            <div class="recommended-item-info">
+                                <div class="recommended-item-title">Budget.xlsx</div>
+                                <div class="recommended-item-subtitle">Modified yesterday</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="start-footer">
+                    <div class="user-profile">
+                        <div class="user-avatar">U</div>
+                        <div class="user-name">User</div>
+                    </div>
+                    <div class="power-button">
+                        <img src="https://img.icons8.com/fluency/48/shutdown.png" alt="Power">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Notification Panel -->
+            <div class="notification-panel" id="notificationPanel">
+                <div class="quick-settings">
+                    <div class="quick-setting">
+                        <img src="https://img.icons8.com/fluency/48/wifi.png" alt="Wi-Fi">
+                        <span>Wi-Fi</span>
+                    </div>
+                    <div class="quick-setting">
+                        <img src="https://img.icons8.com/fluency/48/bluetooth.png" alt="Bluetooth">
+                        <span>Bluetooth</span>
+                    </div>
+                    <div class="quick-setting">
+                        <img src="https://img.icons8.com/fluency/48/airplane-mode-on.png" alt="Airplane">
+                        <span>Airplane</span>
+                    </div>
+                    <div class="quick-setting">
+                        <img src="https://img.icons8.com/fluency/48/battery-level.png" alt="Battery">
+                        <span>Battery</span>
+                    </div>
+                    <div class="quick-setting">
+                        <img src="https://img.icons8.com/fluency/48/connection-status-on.png" alt="Focus">
+                        <span>Focus</span>
+                    </div>
+                    <div class="quick-setting">
+                        <img src="https://img.icons8.com/fluency/48/airplane-mode-on.png" alt="Location">
+                        <span>Location</span>
+                    </div>
+                </div>
+                
+                <div class="brightness-slider">
+                    <div class="slider-container">
+                        <img src="https://img.icons8.com/fluency/48/sun.png" alt="Brightness">
+                        <input type="range" class="slider" min="0" max="100" value="80">
+                    </div>
+                </div>
+                
+                <div class="volume-slider">
+                    <div class="slider-container">
+                        <img src="https://img.icons8.com/fluency/48/volume-up.png" alt="Volume">
+                        <input type="range" class="slider" min="0" max="100" value="60">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right-click Context Menu -->
+            <div class="context-menu" id="contextMenu">
+                <div class="context-menu-item">
+                    <img src="https://img.icons8.com/fluency/48/view.png" alt="View">
+                    <span>View</span>
+                </div>
+                <div class="context-menu-item">
+                    <img src="https://img.icons8.com/fluency/48/sort.png" alt="Sort by">
+                    <span>Sort by</span>
+                </div>
+                <div class="context-menu-item">
+                    <img src="https://img.icons8.com/fluency/48/refresh.png" alt="Refresh">
+                    <span>Refresh</span>
+                </div>
+                <div class="context-menu-separator"></div>
+                <div class="context-menu-item">
+                    <img src="https://img.icons8.com/fluency/48/plus.png" alt="New">
+                    <span>New</span>
+                </div>
+                <div class="context-menu-item">
+                    <img src="https://img.icons8.com/fluency/48/paste.png" alt="Paste">
+                    <span>Paste</span>
+                </div>
+                <div class="context-menu-separator"></div>
+                <div class="context-menu-item">
+                    <img src="https://img.icons8.com/fluency/48/settings.png" alt="Personalize">
+                    <span>Personalize</span>
+                </div>
+            </div>
+
+            <!-- Settings Modal -->
+            <div class="settings-modal" id="settingsModal">
+                <div class="settings-content">
+                    <div class="settings-header">
+                        <div class="settings-title">Settings</div>
+                        <div class="close-button" id="closeButton">
+                            <span style="color: white; font-size: 20px;">×</span>
+                        </div>
+                    </div>
+                    
+                    <div class="settings-body">
+                        <!-- Wallpaper Settings -->
+                        <div class="setting-group">
+                            <div class="setting-label">Background Image URL</div>
+                            <input type="text" class="setting-input" id="bgUrlInput" 
+                                   value="https://4kwallpapers.com/images/wallpapers/windows-11-dark-mode-blue-stock-official-3840x2400-5630.jpg"
+                                   placeholder="Enter image URL">
+                        </div>
+                        
+                        <!-- Wallpaper Selection -->
+                        <div class="setting-group">
+                            <div class="setting-label">Select Wallpaper</div>
+                            <div class="wallpaper-grid">
+                                <div class="wallpaper-item" data-url="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1920&h=1080&fit=crop">
+                                    <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=300&h=200&fit=crop" alt="Mountain Landscape">
+                                    <span>Mountain Landscape</span>
+                                </div>
+                                <div class="wallpaper-item" data-url="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=1920&h=1080&fit=crop">
+                                    <img src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=300&h=200&fit=crop" alt="Forest Path">
+                                    <span>Forest Path</span>
+                                </div>
+                                <div class="wallpaper-item" data-url="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1920&h=1080&fit=crop">
+                                    <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=300&h=200&fit=crop" alt="Tropical Beach">
+                                    <span>Tropical Beach</span>
+                                </div>
+                                <div class="wallpaper-item" data-url="https://images.unsplash.com/photo-1518837695005-2083093ee35b?w=1920&h=1080&fit=crop">
+                                    <img src="https://images.unsplash.com/photo-1518837695005-2083093ee35b?w=300&h=200&fit=crop" alt="City Skyline">
+                                    <span>City Skyline</span>
+                                </div>
+                                <div class="wallpaper-item" data-url="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1920&h=1080&fit=crop&sat=-100">
+                                    <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=300&h=200&fit=crop&sat=-100" alt="Minimalist Mountains">
+                                    <span>Minimalist Mountains</span>
+                                </div>
+                                <div class="wallpaper-item" data-url="https://images.unsplash.com/photo-1519904981063-b0cf448d479e?w=1920&h=1080&fit=crop">
+                                    <img src="https://images.unsplash.com/photo-1519904981063-b0cf448d479e?w=300&h=200&fit=crop" alt="Abstract Waves">
+                                    <span>Abstract Waves</span>
+                                </div>
+                                <div class="wallpaper-item" data-url="https://images.unsplash.com/photo-1518837695005-2083093ee35b?w=1920&h=1080&fit=crop&sat=-50">
+                                    <img src="https://images.unsplash.com/photo-1518837695005-2083093ee35b?w=300&h=200&fit=crop&sat=-50" alt="Monochrome City">
+                                    <span>Monochrome City</span>
+                                </div>
+                                <div class="wallpaper-item" data-url="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1920&h=1080&fit=crop&hue=200">
+                                    <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=300&h=200&fit=crop&hue=200" alt="Blue Mountains">
+                                    <span>Blue Mountains</span>
+                                </div>
+                                <div class="wallpaper-item" data-url="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=1920&h=1080&fit=crop&hue=120">
+                                    <img src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=300&h=200&fit=crop&hue=120" alt="Green Forest">
+                                    <span>Green Forest</span>
+                                </div>
+                                <div class="wallpaper-item" data-url="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1920&h=1080&fit=crop&hue=300">
+                                    <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=300&h=200&fit=crop&hue=300" alt="Purple Beach">
+                                    <span>Purple Beach</span>
+                                </div>
+                                <div class="wallpaper-item" data-url="https://images.unsplash.com/photo-1519904981063-b0cf448d479e?w=1920&h=1080&fit=crop&hue=60">
+                                    <img src="https://images.unsplash.com/photo-1519904981063-b0cf448d479e?w=300&h=200&fit=crop&hue=60" alt="Golden Waves">
+                                    <span>Golden Waves</span>
+                                </div>
+                                <div class="wallpaper-item" data-url="https://images.unsplash.com/photo-1518837695005-2083093ee35b?w=1920&h=1080&fit=crop&hue=180">
+                                    <img src="https://images.unsplash.com/photo-1518837695005-2083093ee35b?w=300&h=200&fit=crop&hue=180" alt="Cyan City">
+                                    <span>Cyan City</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Taskbar Color Settings -->
+                        <div class="setting-group">
+                            <div class="setting-label">Taskbar Color</div>
+                            <div class="color-picker">
+                                <div class="color-preview" id="colorPreview" style="background: rgba(32, 32, 32, 0.85);"></div>
+                                <input type="color" class="setting-input" id="taskbarColorInput" value="#202020">
+                            </div>
+                        </div>
+                        
+                        <div class="setting-group">
+                            <div class="setting-label">Taskbar Opacity (%)</div>
+                            <input type="range" class="slider" id="taskbarOpacityInput" min="50" max="100" value="85">
+                        </div>
+                        
+                        <!-- Time & Date Settings -->
+                        <div class="icon-section">
+                            <div class="icon-section-title">Time & Date</div>
+                            
+                            <div class="setting-group">
+                                <div class="setting-label">Timezone</div>
+                                <select class="setting-input" id="timezoneSelect">
+                                    <option value="auto">Auto (System)</option>
+                                    <option value="America/New_York">Eastern Time</option>
+                                    <option value="America/Chicago">Central Time</option>
+                                    <option value="America/Denver">Mountain Time</option>
+                                    <option value="America/Los_Angeles">Pacific Time</option>
+                                    <option value="Europe/London">London</option>
+                                    <option value="Europe/Paris">Paris</option>
+                                    <option value="Asia/Tokyo">Tokyo</option>
+                                    <option value="Asia/Shanghai">Shanghai</option>
+                                </select>
+                            </div>
+                            
+                            <div class="setting-group">
+                                <div class="setting-label">Time Format</div>
+                                <select class="setting-input" id="timeFormatSelect">
+                                    <option value="12">12-hour</option>
+                                    <option value="24">24-hour</option>
+                                </select>
+                            </div>
+                            
+                            <div class="setting-group">
+                                <div class="setting-label">Date Format</div>
+                                <select class="setting-input" id="dateFormatSelect">
+                                    <option value="MM/DD/YYYY">MM/DD/YYYY</option>
+                                    <option value="DD/MM/YYYY">DD/MM/YYYY</option>
+                                    <option value="YYYY-MM-DD">YYYY-MM-DD</option>
+                                    <option value="DD MMM YYYY">DD MMM YYYY</option>
+                                    <option value="MMM DD, YYYY">MMM DD, YYYY</option>
+                                </select>
+                            </div>
+                            
+                            <div class="setting-group">
+                                <div class="setting-label">Show Seconds</div>
+                                <div class="icon-toggle-container">
+                                    <div class="icon-toggle-info">
+                                        <span class="icon-toggle-label">Display seconds in time</span>
+                                    </div>
+                                    <div class="toggle-switch" id="showSecondsToggle"></div>
+                                </div>
+                            </div>
+                            
+                            <div class="setting-group">
+                                <div class="setting-label">Show Date</div>
+                                <div class="icon-toggle-container">
+                                    <div class="icon-toggle-info">
+                                        <span class="icon-toggle-label">Display date in taskbar</span>
+                                    </div>
+                                    <div class="toggle-switch active" id="showDateToggle"></div>
+                                </div>
+                            </div>
+                            
+                            <div class="setting-group">
+                                <div class="setting-label">Custom Start Time</div>
+                                <div class="icon-toggle-container">
+                                    <div class="icon-toggle-info">
+                                        <span class="icon-toggle-label">Use custom time instead of system time</span>
+                                    </div>
+                                    <div class="toggle-switch" id="useCustomTimeToggle"></div>
+                                </div>
+                            </div>
+                            
+                            <div class="setting-group" id="customTimeGroup" style="display: none;">
+                                <div class="setting-label">Set Custom Time</div>
+                                <input type="datetime-local" class="setting-input" id="customTimeInput">
+                            </div>
+                        </div>
+                        
+                        <!-- Desktop Icons Management -->
+                        <div class="icon-section">
+                            <div class="icon-section-title">Desktop Icons</div>
+                            
+                            <div class="icon-toggle-container" data-icon="desktop-this-pc">
+                                <div class="icon-toggle-info">
+                                    <img src="https://img.icons8.com/fluency/48/computer.png" alt="This PC">
+                                    <span class="icon-toggle-label">This PC</span>
+                                </div>
+                                <div class="toggle-switch active"></div>
+                            </div>
+                            
+                            <div class="icon-toggle-container" data-icon="desktop-recycle-bin">
+                                <div class="icon-toggle-info">
+                                    <img src="https://img.icons8.com/fluency/48/delete-trash.png" alt="Recycle Bin">
+                                    <span class="icon-toggle-label">Recycle Bin</span>
+                                </div>
+                                <div class="toggle-switch active"></div>
+                            </div>
+                            
+                            <div class="icon-toggle-container" data-icon="desktop-documents">
+                                <div class="icon-toggle-info">
+                                    <img src="https://img.icons8.com/fluency/48/folder-invoices.png" alt="Documents">
+                                    <span class="icon-toggle-label">Documents</span>
+                                </div>
+                                <div class="toggle-switch active"></div>
+                            </div>
+                            
+                            <div class="icon-toggle-container" data-icon="desktop-downloads">
+                                <div class="icon-toggle-info">
+                                    <img src="https://img.icons8.com/fluency/48/downloads-folder.png" alt="Downloads">
+                                    <span class="icon-toggle-label">Downloads</span>
+                                </div>
+                                <div class="toggle-switch active"></div>
+                            </div>
+                            
+                            <div class="icon-toggle-container" data-icon="desktop-edge">
+                                <div class="icon-toggle-info">
+                                    <img src="https://img.icons8.com/fluency/48/ms-edge.png" alt="Microsoft Edge">
+                                    <span class="icon-toggle-label">Microsoft Edge</span>
+                                </div>
+                                <div class="toggle-switch active"></div>
+                            </div>
+                            
+                            <div class="icon-toggle-container" data-icon="desktop-explorer">
+                                <div class="icon-toggle-info">
+                                    <img src="https://img.icons8.com/fluency/48/folder-tree.png" alt="File Explorer">
+                                    <span class="icon-toggle-label">File Explorer</span>
+                                </div>
+                                <div class="toggle-switch active"></div>
+                            </div>
+                            
+                            <div class="icon-toggle-container" data-icon="desktop-store">
+                                <div class="icon-toggle-info">
+                                    <img src="https://img.icons8.com/fluency/48/microsoft-store.png" alt="Microsoft Store">
+                                    <span class="icon-toggle-label">Microsoft Store</span>
+                                </div>
+                                <div class="toggle-switch active"></div>
+                            </div>
+                            
+                            <div class="icon-toggle-container" data-icon="desktop-settings">
+                                <div class="icon-toggle-info">
+                                    <img src="https://img.icons8.com/fluency/48/settings.png" alt="Settings">
+                                    <span class="icon-toggle-label">Settings</span>
+                                </div>
+                                <div class="toggle-switch active"></div>
+                            </div>
+                        </div>
+                        
+                        <!-- System Tray Icons Management -->
+                        <div class="icon-section">
+                            <div class="icon-section-title">System Tray Icons</div>
+                            <div class="icon-toggle-container" data-icon="systray-wifi">
+                                <div class="icon-toggle-info">
+                                    <svg viewBox="0 0 24 24" fill="currentColor" style="width: 24px; height: 24px;">
+                                        <path d="M1 9l2 2c4.97-4.97 13.03-4.97 18 0l2-2C16.93 2.93 7.07 2.93 1 9zm8 8l3 3 3-3c-1.65-1.66-4.34-1.66-6 0zm-4-4l2 2c2.76-2.76 7.24-2.76 10 0l2-2C15.14 9.14 8.87 9.14 5 13z"/>
+                                    </svg>
+                                    <span class="icon-toggle-label">Wi-Fi</span>
+                                </div>
+                                <div class="toggle-switch active"></div>
+                            </div>
+                            <div class="icon-toggle-container" data-icon="systray-sound">
+                                <div class="icon-toggle-info">
+                                    <svg viewBox="0 0 24 24" fill="currentColor" style="width: 24px; height: 24px;">
+                                        <path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/>
+                                    </svg>
+                                    <span class="icon-toggle-label">Sound</span>
+                                </div>
+                                <div class="toggle-switch active"></div>
+                            </div>
+                            <div class="icon-toggle-container" data-icon="systray-bluetooth">
+                                <div class="icon-toggle-info">
+                                    <svg viewBox="0 0 24 24" fill="currentColor" style="width: 24px; height: 24px;">
+                                        <path d="M17.71 7.71L12 2h-1v7.59L6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 11 14.41V22h1l5.71-5.71-4.3-4.29 4.3-4.29zM13 5.83l1.88 1.88L13 9.59V5.83zm1.88 10.46L13 18.17v-3.76l1.88 1.88z"/>
+                                    </svg>
+                                    <span class="icon-toggle-label">Bluetooth</span>
+                                </div>
+                                <div class="toggle-switch active"></div>
+                            </div>
+                            <div class="icon-toggle-container" data-icon="systray-battery">
+                                <div class="icon-toggle-info">
+                                    <svg viewBox="0 0 24 24" fill="currentColor" style="width: 24px; height: 24px;">
+                                        <path d="M4 7h12c1.1 0 2 .9 2 2v8c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V9c0-1.1.9-2 2-2zm1 2v8h3v-8H5zm4 0v8h3v-8H9zm4 0v8h3v-8h-3z"/>
+                                        <path d="M18 10h1v6h-1z"/>
+                                    </svg>
+                                    <span class="icon-toggle-label">Battery</span>
+                                </div>
+                                <div class="toggle-switch active"></div>
+                            </div>
+                            <div class="icon-toggle-container" data-icon="systray-airplane">
+                                <div class="icon-toggle-info">
+                                    <svg viewBox="0 0 24 24" fill="currentColor" style="width: 24px; height: 24px;">
+                                        <path d="M21 16v-2l-8-5V3.5c0-.83-.67-1.5-1.5-1.5S10 2.67 10 3.5V9l-8 5v2l8-2.5V19l-2 1.5V22l3.5-1 3.5 1v-1.5L13 19v-5.5l8 2.5z"/>
+                                    </svg>
+                                    <span class="icon-toggle-label">Airplane Mode</span>
+                                </div>
+                                <div class="toggle-switch active"></div>
+                            </div>
+                            <div class="icon-toggle-container" data-icon="systray-vpn">
+                                <div class="icon-toggle-info">
+                                    <svg viewBox="0 0 24 24" fill="currentColor" style="width: 24px; height: 24px;">
+                                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                                    </svg>
+                                    <span class="icon-toggle-label">VPN</span>
+                                </div>
+                                <div class="toggle-switch active"></div>
+                            </div>
+                            <div class="icon-toggle-container" data-icon="systray-notifications">
+                                <div class="icon-toggle-info">
+                                    <svg viewBox="0 0 24 24" fill="currentColor" style="width: 24px; height: 24px;">
+                                        <path d="M12 22c1.1 0 2-.9 2-2h-4c0 1.1.89 2 2 2zm6-6v-5c0-3.07-1.64-5.64-4.5-6.32V4c0-.83-.67-1.5-1.5-1.5s-1.5.67-1.5 1.5v.68C7.63 5.36 6 7.92 6 11v5l-2 2v1h16v-1l-2-2z"/>
+                                    </svg>
+                                    <span class="icon-toggle-label">Notifications</span>
+                                </div>
+                                <div class="toggle-switch active"></div>
+                            </div>
+                        </div>
+                        
+                        <!-- Taskbar Icons Management -->
+                        <div class="icon-section">
+                            <div class="icon-section-title">Taskbar Icons</div>
+                            <div class="icon-toggle-container" data-icon="taskbar-start">
+                                <div class="icon-toggle-info">
+                                    <img src="https://img.icons8.com/fluency/48/windows-11.png" alt="Start">
+                                    <span class="icon-toggle-label">Start Button</span>
+                                </div>
+                                <div class="toggle-switch active"></div>
+                            </div>
+                            <div class="icon-toggle-container" data-icon="taskbar-search">
+                                <div class="icon-toggle-info">
+                                    <img src="https://img.icons8.com/fluency/48/search.png" alt="Search">
+                                    <span class="icon-toggle-label">Search</span>
+                                </div>
+                                <div class="toggle-switch active"></div>
+                            </div>
+                            <div class="icon-toggle-container" data-icon="taskbar-teams">
+                                <div class="icon-toggle-info">
+                                    <img src="https://img.icons8.com/fluency/48/microsoft-teams-2019.png" alt="Teams">
+                                    <span class="icon-toggle-label">Microsoft Teams</span>
+                                </div>
+                                <div class="toggle-switch active"></div>
+                            </div>
+                            <div class="icon-toggle-container" data-icon="taskbar-widgets">
+                                <div class="icon-toggle-info">
+                                    <img src="https://img.icons8.com/fluency/48/dashboard.png" alt="Widgets">
+                                    <span class="icon-toggle-label">Widgets</span>
+                                </div>
+                                <div class="toggle-switch active"></div>
+                            </div>
+                            <div class="icon-toggle-container" data-icon="taskbar-explorer">
+                                <div class="icon-toggle-info">
+                                    <img src="https://img.icons8.com/fluency/48/folder-tree.png" alt="File Explorer">
+                                    <span class="icon-toggle-label">File Explorer</span>
+                                </div>
+                                <div class="toggle-switch active"></div>
+                            </div>
+                            <div class="icon-toggle-container" data-icon="taskbar-edge">
+                                <div class="icon-toggle-info">
+                                    <img src="https://img.icons8.com/fluency/48/ms-edge.png" alt="Edge">
+                                    <span class="icon-toggle-label">Microsoft Edge</span>
+                                </div>
+                                <div class="toggle-switch active"></div>
+                            </div>
+                            <div class="icon-toggle-container" data-icon="taskbar-store">
+                                <div class="icon-toggle-info">
+                                    <img src="https://img.icons8.com/fluency/48/microsoft-store.png" alt="Store">
+                                    <span class="icon-toggle-label">Microsoft Store</span>
+                                </div>
+                                <div class="toggle-switch active"></div>
+                            </div>
+                            <div class="icon-toggle-container" data-icon="taskbar-office">
+                                <div class="icon-toggle-info">
+                                    <img src="https://img.icons8.com/fluency/48/microsoft-office-2019.png" alt="Office">
+                                    <span class="icon-toggle-label">Microsoft Office</span>
+                                </div>
+                                <div class="toggle-switch active"></div>
+                            </div>
+                            <div class="icon-toggle-container" data-icon="taskbar-settings">
+                                <div class="icon-toggle-info">
+                                    <img src="https://img.icons8.com/fluency/48/settings.png" alt="Settings">
+                                    <span class="icon-toggle-label">Settings</span>
+                                </div>
+                                <div class="toggle-switch active"></div>
+                            </div>
+                            <div class="icon-toggle-container" data-icon="taskbar-vscode">
+                                <div class="icon-toggle-info">
+                                    <img src="https://img.icons8.com/fluency/48/visual-studio-code-2019.png" alt="VS Code">
+                                    <span class="icon-toggle-label">Visual Studio Code</span>
+                                </div>
+                                <div class="toggle-switch active"></div>
+                            </div>
+                            <div class="icon-toggle-container" data-icon="taskbar-word">
+                                <div class="icon-toggle-info">
+                                    <img src="https://img.icons8.com/fluency/48/microsoft-word-2019.png" alt="MS Word">
+                                    <span class="icon-toggle-label">Microsoft Word</span>
+                                </div>
+                                <div class="toggle-switch active"></div>
+                            </div>
+                        </div>
+                        
+                        <!-- Add Custom App -->
+                        <div class="icon-section">
+                            <div class="icon-section-title">Add Custom App</div>
+                            <div class="add-icon-container">
+                                <input type="url" class="setting-input add-icon-input" id="appIconUrlInput" placeholder="Enter icon URL">
+                                <button class="add-icon-button" id="addAppBtn">Add</button>
+                            </div>
+                        </div>
+                        
+                        <button class="apply-button" id="applySettings">Apply Changes</button>
+                        <button class="apply-button" id="alignIcons" style="background: #4CAF50; margin-top: 8px;">📐 Align Desktop Icons</button>
+                        <button class="apply-button" id="resetSettings" style="background: #ff6b6b; margin-top: 8px; border: 2px solid #ff5252;">🔄 Reset to Default</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript Imports -->
+    <script src="js/clock.js"></script>
+    <script src="js/ui-interactions.js"></script>
+    <script src="js/settings.js"></script>
+    <script src="js/desktop-icons.js"></script>
+    <script src="js/icon-management.js"></script>
+    <script src="js/wallpaper-taskbar.js"></script>
+    
+    <!-- Initialize settings on page load -->
+    <script>
+        // Load settings on page load
+        document.addEventListener('DOMContentLoaded', () => {
+            loadClockSettings();
+        });
+    </script>
+</body>
+</html>

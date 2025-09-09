@@ -1,0 +1,88 @@
+/* Desktop Icons */
+.desktop-icon {
+    position: absolute;
+    width: 76px;
+    padding: 8px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.15s;
+    text-align: center;
+    left: 20px;
+    top: 20px;
+}
+
+.desktop-icon[data-position="0"] { top: 20px; left: 20px; }
+.desktop-icon[data-position="1"] { top: 120px; left: 20px; }
+.desktop-icon[data-position="2"] { top: 220px; left: 20px; }
+.desktop-icon[data-position="3"] { top: 320px; left: 20px; }
+.desktop-icon[data-position="4"] { top: 420px; left: 20px; }
+.desktop-icon[data-position="5"] { top: 520px; left: 20px; }
+.desktop-icon[data-position="6"] { top: 620px; left: 20px; }
+.desktop-icon[data-position="7"] { top: 720px; left: 20px; }
+
+.desktop-icon[data-position="8"] { top: 20px; left: 110px; }
+.desktop-icon[data-position="9"] { top: 120px; left: 110px; }
+.desktop-icon[data-position="10"] { top: 220px; left: 110px; }
+.desktop-icon[data-position="11"] { top: 320px; left: 110px; }
+.desktop-icon[data-position="12"] { top: 420px; left: 110px; }
+.desktop-icon[data-position="13"] { top: 520px; left: 110px; }
+.desktop-icon[data-position="14"] { top: 620px; left: 110px; }
+.desktop-icon[data-position="15"] { top: 720px; left: 110px; }
+
+.desktop-icon[data-position="16"] { top: 20px; left: 200px; }
+.desktop-icon[data-position="17"] { top: 120px; left: 200px; }
+.desktop-icon[data-position="18"] { top: 220px; left: 200px; }
+.desktop-icon[data-position="19"] { top: 320px; left: 200px; }
+.desktop-icon[data-position="20"] { top: 420px; left: 200px; }
+.desktop-icon[data-position="21"] { top: 520px; left: 200px; }
+.desktop-icon[data-position="22"] { top: 620px; left: 200px; }
+.desktop-icon[data-position="23"] { top: 720px; left: 200px; }
+
+/* Responsive Desktop Icons */
+@media (max-width: 1200px) {
+    .desktop-icon[data-position="4"] { top: 420px; left: 20px; }
+    .desktop-icon[data-position="5"] { top: 520px; left: 20px; }
+    .desktop-icon[data-position="6"] { top: 620px; left: 20px; }
+    .desktop-icon[data-position="7"] { top: 720px; left: 20px; }
+}
+
+@media (max-width: 800px) {
+    .desktop-icon[data-position="2"] { top: 220px; left: 20px; }
+    .desktop-icon[data-position="3"] { top: 320px; left: 20px; }
+    .desktop-icon[data-position="4"] { top: 420px; left: 20px; }
+    .desktop-icon[data-position="5"] { top: 520px; left: 20px; }
+    .desktop-icon[data-position="6"] { top: 620px; left: 20px; }
+    .desktop-icon[data-position="7"] { top: 720px; left: 20px; }
+}
+
+.desktop-icon:hover {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(20px);
+}
+
+.desktop-icon.selected {
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(20px);
+}
+
+.desktop-icon img {
+    width: 48px;
+    height: 48px;
+    margin: 0 auto;
+    filter: drop-shadow(0 2px 4px rgba(0,0,0,0.3));
+    transition: transform 0.2s ease;
+}
+
+.desktop-icon:hover img {
+    transform: scale(1.05);
+}
+
+.desktop-icon span {
+    display: block;
+    margin-top: 4px;
+    font-size: 12px;
+    color: white;
+    text-shadow: 0 1px 2px rgba(0,0,0,0.8), 0 0 4px rgba(0,0,0,0.5);
+    line-height: 1.2;
+    word-wrap: break-word;
+}

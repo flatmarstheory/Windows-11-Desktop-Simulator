@@ -1,0 +1,103 @@
+/* Notification Panel */
+.notification-panel {
+    position: absolute;
+    bottom: 56px;
+    right: 8px;
+    width: 380px;
+    background: rgba(36, 36, 36, 0.98);
+    backdrop-filter: blur(60px) saturate(180%);
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 16px;
+    display: none;
+    z-index: 999;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+    animation: slideUp 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    color: white;
+}
+
+.notification-panel.active {
+    display: block;
+}
+
+.quick-settings {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+    margin-bottom: 16px;
+}
+
+.quick-setting {
+    aspect-ratio: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.2s;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.quick-setting:hover {
+    background: rgba(255, 255, 255, 0.08);
+}
+
+.quick-setting.active {
+    background: #60cdff;
+    border-color: #60cdff;
+}
+
+.quick-setting img {
+    width: 20px;
+    height: 20px;
+    filter: invert(1);
+    margin-bottom: 8px;
+}
+
+.quick-setting span {
+    font-size: 11px;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.brightness-slider {
+    margin: 16px 0;
+}
+
+.slider-container {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.slider-container img {
+    width: 16px;
+    height: 16px;
+    filter: invert(1);
+    opacity: 0.7;
+}
+
+.slider {
+    flex: 1;
+    height: 4px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 2px;
+    outline: none;
+    -webkit-appearance: none;
+    appearance: none;
+}
+
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 16px;
+    height: 16px;
+    background: white;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.volume-slider {
+    margin: 16px 0;
+}
