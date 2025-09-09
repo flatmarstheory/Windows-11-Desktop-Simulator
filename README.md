@@ -1,6 +1,6 @@
 # Windows 11 Desktop Simulator
 
-A modern, interactive Windows 11 desktop simulator built with HTML, CSS, and JavaScript. Features authentic Windows 11 icons and a fully functional desktop environment.
+A modern, interactive Windows 11 desktop simulator built with HTML, CSS, and JavaScript. Features a fully functional desktop environment with customizable icons and settings.
 
 ## Project Structure
 
@@ -32,7 +32,7 @@ DeskFake/
 
 - **Interactive Desktop**: Click and interact with desktop icons
 - **Functional Taskbar**: Working start menu, system tray, and clock
-- **Authentic Windows 11 Icons**: Uses real Windows 11 system icons from [WindowsIcons repository](https://github.com/HaydenReeve/WindowsIcons)
+- **Modern Icons**: Clean, modern icons for all desktop and system elements
 - **Settings Panel**: Customize time format, date format, and icon visibility
 - **Wallpaper Customization**: Change desktop wallpaper and taskbar colors
 - **Icon Management**: Toggle desktop, taskbar, and system tray icons
@@ -95,9 +95,9 @@ The codebase is organized into modular files for easy maintenance:
 
 ## Icons
 
-This project uses authentic Windows 11 icons sourced from the [WindowsIcons repository by HaydenReeve](https://github.com/HaydenReeve/WindowsIcons). These icons are extracted directly from Windows system files (imageres.dll, shell32.dll, etc.) providing an authentic Windows 11 experience.
+This project uses modern, clean icons from Icons8's Fluency collection, providing a consistent and professional appearance across all interface elements.
 
-### Icon Sources:
+### Icon Categories:
 - **Desktop Icons**: This PC, Recycle Bin, Documents, Downloads, Microsoft Edge, File Explorer, Microsoft Store, Settings
 - **Taskbar Icons**: Search, Microsoft Teams, Widgets, File Explorer, Microsoft Edge, Microsoft Store, Microsoft Office, Settings, Visual Studio Code, Microsoft Word
 - **System Tray Icons**: Wi-Fi, Sound, Bluetooth, Battery, Airplane Mode, VPN, Notifications
